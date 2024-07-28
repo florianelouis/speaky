@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply h-14 w-full flex justify-center items-center bg-rose-300 rounded-full border-b-4 border-rose-400 cursor-pointer duration-200 hover:border-transparent hover:translate-y-1
+    }
+
+    .btn-langue {
+        @apply p-3 px-8 w-48 bg-orange-500 rounded-full border-b-4 border-orange-600 cursor-pointer duration-200 hover:border-transparent hover:translate-y-1
+    }
+
+    .btn-exercice {
+        @apply h-14 w-[110%] flex justify-center items-center bg-rose-300 rounded-full border-b-4 border-rose-400 cursor-pointer duration-200 hover:border-transparent hover:translate-y-1
+    }
+
+
+    /***** Barre de navigation *****/
+    /* Téléphone */
+    .header-phone {
+        @apply flex justify-center z-10 fixed w-4/5 bottom-5 left-1/2 transform -translate-x-1/2 h-16 border-2 border-white shadow-[0_0_10px_1px_rgba(0,0,0,0.5)] bg-orange-500 backdrop-blur-2xl px-5 rounded-full
+    }
+
+    .nav-phone {
+        @apply flex items-center w-full h-full
+    }
+
+    .ul-phone {
+        @apply flex justify-around items-center w-full
+    }
+
+    .li-phone {
+        @apply h-11 w-11 rounded-full flex justify-center items-center
+    }
+
+
+
+    /* Tablette */
+    .header-tab {
+        @apply rounded-none top-0 h-screen w-1/3 max-w-[400px] left-0 transform-none flex backdrop-brightness-110 border-none bg-transparent
+    }
+
+    .nav-tab {
+        @apply flex flex-col w-full
+    }
+
+    .ul-tab {
+        @apply w-full grid gap-5
+    }
+
+
+    /* placé sur le <a> */
+    .li-tab {
+        @apply w-full flex flex-row items-center gap-5 border-t-[1px] pt-5
+    }
+
+    .li-tab-hover {
+        @apply hover:scale-105 duration-200
+    }
+
+
+
+
+
+    .main-phone-profil {
+        @apply w-full h-[80vh] min-h-[476px] text-lg sm:text-xl bg-white text-black border-4 border-white rounded-t-2xl overflow-auto fixed bottom-0 flex flex-col items-center
+    }
+
+    .main-tab-profil {
+        @apply m-0 ml-[calc(100vw/3)] xl:ml-[400px] w-[calc(100vw/3*2)] xl:w-[calc(100vw-400px)]
+    }
+
+
+
+    .slider-list {
+        @apply list-none m-0 p-0 transition-transform duration-500 grid grid-flow-col gap-5 auto-cols-[100%];
+    }
+
+    .slider-list-item {
+        @apply w-full ;
+    }
+
+    .slider-list-item img {
+        @apply block w-full max-h-screen object-cover object-center;
+    }
+
+    .slider-dots {
+        @apply flex justify-center items-center gap-2 z-[1] ;
+    }
+
+    .slider-dot {
+        @apply w-4 h-4 rounded-full border-[1px] rounded-full border-orange-500 outline-none appearance-none cursor-pointer;
+    }
+
+    .slider-btn {
+        @apply bg-transparent outline-none appearance-none cursor-pointer border-2 border-transparent z-[1];
+    }
+
+    .slider-btn:focus {
+        @apply border-white;
+    }
+
+    .slider-dot:focus {
+        @apply border-orange-500;
+    }
+
+    .slider-dot.current {
+        @apply bg-orange-500;
+        /* l'onglet sélectionné a un arrière-plan bleu */
+    }
+
+
+    .underline-effect {
+        @apply relative heading-text text-lg;
+      }
+    
+      .underline-effect::after {
+        @apply content-[''] absolute w-full h-1 left-0 bottom-[-4px] bg-red-400 origin-bottom-right hover:origin-bottom-left scale-x-0 hover:scale-x-100 transition-transform duration-300;
+      }
+    
+      .heading-text {
+        @apply  bg-clip-text  text-6xl font-extrabold ;
+      }
+
+
+      .btn-non-valider{
+        @apply pointer-events-none bg-gray-300 border-none
+      }
+
+}
